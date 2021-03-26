@@ -67,7 +67,7 @@ abstract class AttributeLocalizations {
   // ignore: unused_field
   final String localeName;
 
-  static AttributeLocalizations of(BuildContext context) {
+  static AttributeLocalizations? of(BuildContext context) {
     return Localizations.of<AttributeLocalizations>(context, AttributeLocalizations);
   }
 
