@@ -68,9 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             TextFormField(
               validator: (value) {
-                if (value.isEmpty)
-                  return ValidationLocalizations.of(context).greaterThan(
-                      AttributeLocalizations.of(context).password, 2);
+                if (value.length < 6)
+                  return ValidationLocalizations.of(context).tooShort(
+                    AttributeLocalizations.of(context).password,
+                    6,
+                  );
 
                 return null;
               },

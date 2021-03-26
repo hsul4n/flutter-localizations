@@ -18,7 +18,9 @@ dependencies:
 
   intl: ^0.17.0
   attribute_localizations:
-    git: git://hsul4n/flutter-localizations/packages/attribute_localizations
+    git:
+      url: git://github.com/hsul4n/flutter-localizations.git
+      path: packages/attribute_localizations
 
 dev_dependencies:
   flutter_test:
