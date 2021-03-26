@@ -20,8 +20,8 @@ class ValidationLocalizationsEn extends ValidationLocalizations {
   }
 
   @override
-  String confirmation(String attribute) {
-    return 'doesn\'t match ${attribute}';
+  String confirmation(String attribute, String other) {
+    return '${attribute} doesn\'t match ${other}';
   }
 
   @override

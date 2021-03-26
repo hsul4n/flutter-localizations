@@ -1,7 +1,7 @@
 {
 	"accepted": "يجب أن تقبل {attribute}",
 	"blank": "لا يمكن أن يكون محتوى {attribute} فارغاً",
-	"confirmation": "محتوى {attribute} لا يتوافق مع {attribute}",
+	"confirmation": "محتوى {attribute} لا يتطابق مع {other}",
 	"empty": "لا يمكن أن يكون محتوى {attribute} فارغاً",
 	"equalTo": "يجب أن يساوي طول {attribute} {count}",
 	"even": "يجب أن يكون عدد {attribute} زوجياً",

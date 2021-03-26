@@ -20,8 +20,8 @@ class ValidationLocalizationsAr extends ValidationLocalizations {
   }
 
   @override
-  String confirmation(String attribute) {
-    return 'محتوى ${attribute} لا يتوافق مع ${attribute}';
+  String confirmation(String attribute, String other) {
+    return 'محتوى ${attribute} لا يتطابق مع ${other}';
   }
 
   @override

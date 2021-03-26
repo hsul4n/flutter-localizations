@@ -15,10 +15,13 @@
       }
     }
   },
-  "confirmation": "doesn't match {attribute}",
+  "confirmation": "{attribute} doesn't match {other}",
   "@confirmation": {
     "placeholders": {
       "attribute": {
+        "type": "String"
+      },
+      "other": {
         "type": "String"
       }
     }
