@@ -1,7 +1,6 @@
 
 import 'dart:async';
 
-// ignore: unused_import
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -9,6 +8,7 @@ import 'package:intl/intl.dart' as intl;
 
 import 'validation_localizations_ar.dart';
 import 'validation_localizations_en.dart';
+import 'validation_localizations_fr.dart';
 
 /// Callers can lookup localized strings with an instance of ValidationLocalizations returned
 /// by `ValidationLocalizations.of(context)`.
@@ -64,7 +64,6 @@ import 'validation_localizations_en.dart';
 abstract class ValidationLocalizations {
   ValidationLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
-  // ignore: unused_field
   final String localeName;
 
   static ValidationLocalizations? of(BuildContext context) {
@@ -93,7 +92,8 @@ abstract class ValidationLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en')
+    Locale('en'),
+    Locale('fr')
   ];
 
   /// No description provided for @accepted.
@@ -244,7 +244,7 @@ class _ValidationLocalizationsDelegate extends LocalizationsDelegate<ValidationL
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'en', 'fr'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_ValidationLocalizationsDelegate old) => false;
@@ -258,6 +258,7 @@ ValidationLocalizations _lookupValidationLocalizations(Locale locale) {
 switch (locale.languageCode) {
   case 'ar': return ValidationLocalizationsAr();
     case 'en': return ValidationLocalizationsEn();
+    case 'fr': return ValidationLocalizationsFr();
 }
 
 

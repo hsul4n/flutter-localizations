@@ -1,7 +1,6 @@
 
 import 'dart:async';
 
-// ignore: unused_import
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -9,6 +8,7 @@ import 'package:intl/intl.dart' as intl;
 
 import 'attribute_localizations_ar.dart';
 import 'attribute_localizations_en.dart';
+import 'attribute_localizations_fr.dart';
 
 /// Callers can lookup localized strings with an instance of AttributeLocalizations returned
 /// by `AttributeLocalizations.of(context)`.
@@ -64,7 +64,6 @@ import 'attribute_localizations_en.dart';
 abstract class AttributeLocalizations {
   AttributeLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
-  // ignore: unused_field
   final String localeName;
 
   static AttributeLocalizations? of(BuildContext context) {
@@ -93,7 +92,8 @@ abstract class AttributeLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('ar'),
-    Locale('en')
+    Locale('en'),
+    Locale('fr')
   ];
 
   /// No description provided for @name.
@@ -285,7 +285,7 @@ abstract class AttributeLocalizations {
   /// No description provided for @q.
   ///
   /// In en, this message translates to:
-  /// **'البحث'**
+  /// **'Search'**
   String get q;
 }
 
@@ -298,7 +298,7 @@ class _AttributeLocalizationsDelegate extends LocalizationsDelegate<AttributeLoc
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'en', 'fr'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AttributeLocalizationsDelegate old) => false;
@@ -312,6 +312,7 @@ AttributeLocalizations _lookupAttributeLocalizations(Locale locale) {
 switch (locale.languageCode) {
   case 'ar': return AttributeLocalizationsAr();
     case 'en': return AttributeLocalizationsEn();
+    case 'fr': return AttributeLocalizationsFr();
 }
 
 
