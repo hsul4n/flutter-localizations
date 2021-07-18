@@ -1,9 +1,7 @@
 
-// ignore: unused_import
-import 'package:intl/intl.dart' as intl;
-import 'attribute_localizations.dart';
 
-// ignore_for_file: unnecessary_brace_in_string_interps
+
+import 'attribute_localizations.dart';
 
 /// The translations for English (`en`).
 class AttributeLocalizationsEn extends AttributeLocalizations {
@@ -103,5 +101,5 @@ class AttributeLocalizationsEn extends AttributeLocalizations {
   String get title => 'Title';
 
   @override
-  String get q => 'البحث';
+  String get q => 'Search';
 }
